@@ -1,0 +1,30 @@
+      <!-- left-side contact email info -->
+      <div class="col s12 m8">
+        <div class="card-panel grey lighten-3">
+          <h5 class="center">Tell us your dream adventures ...</h5>
+          <form onsubmit="sendOffroad(event)">
+            {% for item in site.data.contact.formats %}
+            <div class="input-field">
+              <i class="material-icons prefix red-text text-darken-2">{{ item.icon }}</i>
+              {%- if item.class %}
+              <input type="{{ item.type }}" class="{{ item.class }}" id="{{ item.id }}">
+              {%- else %}
+              <input type="{{ item.type }}" id="{{ item.id }}" {{ item.req }}>
+              {%- endif %}
+              <label for="{{ item.id }}">{{ item.label }}</label>
+            </div>
+            {% endfor %}
+            <div class="input-field">
+              <i class="material-icons prefix red-text text-darken-2">message</i>
+              <textarea class="materialize-textarea" id="message"></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button class="btn waves-effect waves-light red darken-4" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
+            <div id="alert-field" class="alert hidden">
+              <p>Uh oh! Something went wrong!</p>
+            </div>
+          </form>
+        </div>
+      </div>

@@ -1,0 +1,10 @@
+formats:
+  - icon: "assignment_ind"
+    type: "text"
+    id: "name"
+    label: "Name"
+  - icon: "email"
+    type: "email"
+    id: "email"
+    label: "Email"
+    req: "required"

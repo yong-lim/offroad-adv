@@ -1,0 +1,22 @@
+<!-- Section: tour-packages -->
+<section class="section grey lighten-3 scrollspy" id="packages">
+  <div class="container">
+    <div class="row">
+      <h4 class="center"><span class="red-text text-darken-2">Tour Packages</span></h4>
+      <div class="col s10 offset-s1">
+        <ul class="collapsible" data-collapsible="expandable">
+          {% for room in site.data.rooms %}
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons red-text">{{ room.icon }}</i>{{ room.title }}</div>
+            <div class="collapsible-body">
+              <blockquote >{{ room.details | markdownify }}</blockquote>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
