@@ -12,9 +12,16 @@
   link      : "#contact"
   link-text : "INFO"
 
-- title   : "Push your limits"
+- title   : "Push yourselve to your limits"
   details : ""
   photo   : "2024-01/Photo 18.jpg"
   motion  : right-align
+  link      : "#contact"
+  link-text : "INFO"
+
+- title   : "Enjoy the camaraderie of friends"
+  details : ""
+  photo   : "2024-01/Photo 05.jpg"
+  motion  : left-align
   link      : "#contact"
   link-text : "INFO"
