@@ -12,7 +12,7 @@ function formFocus() {
 function formReset() {
   $('#alert-field')
     .removeClass()
-    .html("<span><p>Thank you for dropping us a line . . .</p></span><br>");
+    .html("<span><p>Thank you, we'll get back to you asap.</p></span><br>");
   document.getElementById("offroadGForm").reset();
   setTimeout(() => {
     $('#alert-field').removeClass().addClass('is-hidden');
