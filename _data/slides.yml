@@ -1,3 +1,10 @@
+- title     : "All about our adventures."
+  details   : ""
+  photo     : "2024-01/Magazine.jpg"
+  motion    : right-align 
+  link      : "#contact"
+  link-text : "INFO"
+
 - title     : "Have an adventure of your life."
   details   : ""
   photo     : "2024-01/Photo 15.jpg"
