@@ -2,28 +2,34 @@
       <div class="col s12 m8">
         <div class="card-panel grey lighten-3">
           <h5 class="center">Tell us your dream adventures ...</h5>
-          <form onsubmit="sendOffroad(event)">
-            {% for item in site.data.contact.formats %}
+          <form onsubmit="offroadGForm(event)" id="offroadGForm">
+            {% for item in site.data.contact %}
             <div class="input-field">
               <i class="material-icons prefix red-text text-darken-2">{{ item.icon }}</i>
               {%- if item.class %}
-              <input type="{{ item.type }}" class="{{ item.class }}" id="{{ item.id }}">
+              <input name="{{ item.name }}" type="{{ item.type }}" class="{{ item.class }}" id="{{ item.id }}">
               {%- else %}
-              <input type="{{ item.type }}" id="{{ item.id }}" {{ item.req }}>
+              <input name="{{ item.name }}" type="{{ item.type }}" id="{{ item.id }}" {{ item.req }}>
               {%- endif %}
               <label for="{{ item.id }}">{{ item.label }}</label>
             </div>
             {% endfor %}
             <div class="input-field">
               <i class="material-icons prefix red-text text-darken-2">message</i>
-              <textarea class="materialize-textarea" id="message"></textarea>
+              <textarea name="entry.1696159737" class="materialize-textarea" id="message"></textarea>
               <label for="message">Your Message</label>
             </div>
-            <button class="btn waves-effect waves-light red darken-4" type="submit" name="action">Submit
+
+            <button id="submitButton" class="btn waves-light red darken-4" type="submit" name="action">
+            <span id="buttonText">Submit</span>
               <i class="material-icons right">send</i>
             </button>
+
+            <div id="progress" class="alert hidden">
+              <progress></progress>
+            </div>
             <div id="alert-field" class="alert hidden">
-              <p>Uh oh! Something went wrong!</p>
+              <p id="alertText">Uh oh! Something went wrong!</p>
             </div>
           </form>
         </div>

@@ -22,12 +22,15 @@ function sendOffroad(e) {
 
   if(POST_URL) {
     $.post(POST_URL, JSON.stringify(postRequest))
+      .then(res => res.json())
       .then(res => {
+        console.log("posted");
         e.target.reset();
         $('#alert-field')
           .removeClass()
           .addClass(`alert alert-${res.code}`)
           .text(res.msg);
+        console.log(res.code, res.msg);
       });
 
     $('#alert-field')
