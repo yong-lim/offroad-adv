@@ -27,7 +27,7 @@ function offroadGForm(e) {
   console.log("in offroadGForm");
   $('#alert-field')
     .removeClass()
-    .html("<span><p>Please wait while we're sending your messgae . . .</p>  <progress></progress></span>");
+    .html("<span><p>Please wait while we're sending your message . . .</p>  <progress></progress></span>");
 
   //AJAX request
   $.ajax({
