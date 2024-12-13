@@ -2,6 +2,14 @@
       <div class="col s12 m8">
         <div class="card-panel grey lighten-3">
           <h5 class="center">Tell us your dream adventures ...</h5>
+          <div class="center">
+            {% for network in site.data.social %}
+                <a href="{{ network.url }}" target="_blank">
+                  <i class="fa-brands fa-{{ network.icon}} fa-2x"></i>
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {% endfor %}
+          </div>
           <form onsubmit="offroadGForm(event)" id="offroadGForm">
             {% for item in site.data.contact %}
             <div class="input-field">
