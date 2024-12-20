@@ -1,0 +1,16 @@
+# no version needed since 2020
+    # expose:
+    #   - "4500"
+services:
+  jekyll:
+    image: bretfisher/jekyll-serve
+    container_name: offroad
+    working_dir: /srv
+    volumes:
+      - .:/srv
+    expose:
+      - '5745'
+    ports:
+      - '5745:5745'
+      - '35745:35745'
+    command: bundle exec jekyll s --trace --force_polling -H 0.0.0.0 -P 5745 -l --livereload-port 35745
